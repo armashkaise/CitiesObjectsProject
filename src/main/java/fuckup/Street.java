@@ -14,6 +14,7 @@ public class Street implements AreaSize{
         this.name = name;
         this.lenght = lenght;
         this.width = width;
+
     }
 
     public UUID getId() {
