@@ -1,7 +1,7 @@
 package fuckup.utils;
 
-import Lessons.Lesson9WildcardAndPECS.yet.another.fuckup.AreaSize;
-import Lessons.Lesson9WildcardAndPECS.yet.another.fuckup.Street;
+import fuckup.AreaSize;
+import fuckup.Street;
 
 import java.util.Collection;
 import java.util.Objects;
@@ -15,7 +15,7 @@ final public class AreaCalculator {
     public static int calcArea(Collection<? extends AreaSize> areaSizes) {
         int areaResult = 0;
         for (AreaSize areaSize : areaSizes) {
-            areaResult += areaSize.getLenght() * areaSize.getWidth();
+            areaResult += calcArea(areaSize);
         }
         return areaResult;
     }
@@ -36,12 +36,4 @@ final public class AreaCalculator {
         return areaSize.getLenght() * areaSize.getWidth();
     }
 
-//
-//    public static int calcParks(Set<Park> parks) {
-//        int areaResult = 0;
-//        for (Park park : parks) {
-//            areaResult += park.getLenght() * park.getWidth();
-//        }
-//        return areaResult;
-//    }
 }

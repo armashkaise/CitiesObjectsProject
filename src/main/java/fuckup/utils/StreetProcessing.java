@@ -1,7 +1,7 @@
 package fuckup.utils;
 
-import Lessons.Lesson9WildcardAndPECS.yet.another.fuckup.AreaSize;
-import Lessons.Lesson9WildcardAndPECS.yet.another.fuckup.City;
+import fuckup.AreaSize;
+import fuckup.City;
 
 import java.util.HashSet;
 import java.util.List;
@@ -24,6 +24,5 @@ final public class StreetProcessing {
         for (AreaSize street : streets1) {
             consumer.add(street);
         }
-
     }
 }

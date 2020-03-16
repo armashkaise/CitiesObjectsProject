@@ -1,9 +1,13 @@
 package fuckup;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Getter
 public class City {
     private Set<Street> streets;
     private Set<Park> parks;
@@ -13,16 +17,7 @@ public class City {
         this.parks = new HashSet<>();
     }
 
-    public Set<Street> getStreets() {
-        return streets;
-    }
-
-    public Set<Park> getParks() {
-        return parks;
-    }
-
     public void addStreet(Street street){
-//        if (Objects.nonNull(street))
             streets.add(street);
     }
 

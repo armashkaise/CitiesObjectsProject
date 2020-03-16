@@ -1,5 +1,6 @@
-import Lessons.Lesson9WildcardAndPECS.yet.another.fuckup.*;
-import Lessons.Lesson9WildcardAndPECS.yet.another.fuckup.utils.AreaCalculator;
+import fuckup.*;
+import fuckup.utils.AreaCalculator;
+import fuckup.utils.StreetProcessing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,24 +22,18 @@ public class Main {
         int areaOfStreets = AreaCalculator.calcArea(streets);
         int areaOfParks = AreaCalculator.calcArea(parks);
 
-        ArrayList<FullAreaParams> waterpoolsAndOvrags = new ArrayList<>();
-        waterpoolsAndOvrags.add(new Waterpool());
-        waterpoolsAndOvrags.add(new Ovrags());
-        int areaOfHZ = AreaCalculator.calcArea(waterpoolsAndOvrags);
-
         var areaSize = city.getAllAreaSizeble();
 
         City kostanay = new City();
         kostanay.addStreet(new Street("Аль-фараби", 1000, 8));
         kostanay.addStreet(new Street("Интернационалистов", 1000, 8));
         kostanay.addStreet(null);
+
         List<City> cities = List.<City>of(city, kostanay);
+        Set<AreaSize> allStreets = StreetProcessing.findAllStreets(cities);
 
         int i = AreaCalculator.calcAreaForMainStreets(kostanay.getStreets(), 10000);
         System.out.println(i);
-
-
-
     }
 
 }
