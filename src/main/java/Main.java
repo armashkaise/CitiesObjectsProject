@@ -22,7 +22,7 @@ public class Main {
         int areaOfStreets = AreaCalculator.calcArea(streets);
         int areaOfParks = AreaCalculator.calcArea(parks);
 
-        var areaSize = city.getAllAreaSizeble();
+        Set<? extends AreaSize> areaSize = city.getAllAreaSizeble();
 
         City kostanay = new City();
         kostanay.addStreet(new Street("Аль-фараби", 1000, 8));
